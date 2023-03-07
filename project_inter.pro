@@ -1,4 +1,5 @@
-QT       += core gui sql
+#QT       += core gui sql
+QT       += core gui sql network multimedia multimediawidgets charts printsupport widgets axcontainer serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -17,12 +18,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     connection.cpp \
+    employee.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     connection.h \
+    employee.h \
     login.h \
     mainwindow.h
 

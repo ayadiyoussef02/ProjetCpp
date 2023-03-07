@@ -6,9 +6,11 @@
 
 class connection
 {
+    QSqlDatabase db;
 public:
     connection();
     bool createconnect();
+    void closeconnect();
 };
 
 #endif // CONNECTION_H
