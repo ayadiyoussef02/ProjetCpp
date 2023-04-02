@@ -6,973 +6,259 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1202</width>
-    <height>694</height>
+    <width>868</width>
+    <height>740</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>gestion des employés</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label_15">
-    <property name="geometry">
-     <rect>
-      <x>590</x>
-      <y>60</y>
-      <width>61</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 75 9pt &quot;Adobe Caslon Pro Bold&quot;;</string>
-    </property>
-    <property name="text">
-     <string>Trier par :</string>
-    </property>
-   </widget>
-   <widget class="QTableView" name="tableView_affiche">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>100</y>
-      <width>681</width>
-      <height>251</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_supprimer">
-    <property name="geometry">
-     <rect>
-      <x>540</x>
-      <y>370</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton
-{
-    color: #ffc34a;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
-    border-width: 1px;
-    border-color: #1e1e1e;
-    border-style: solid;
-    border-radius: 6;
-    padding: 3px;
-    font-size: 12px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-QPushButton:pressed
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
-}</string>
-    </property>
-    <property name="text">
-     <string>Supprimer</string>
-    </property>
-   </widget>
-   <widget class="QGraphicsView" name="graphicsView_statistique_2">
-    <property name="geometry">
-     <rect>
-      <x>980</x>
-      <y>410</y>
-      <width>131</width>
-      <height>121</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_genererqr">
-    <property name="geometry">
-     <rect>
-      <x>1000</x>
-      <y>540</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">
-QPushButton
-{
-    color: #ffc34a;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
-    border-width: 1px;
-    border-color: #1e1e1e;
-    border-style: solid;
-    border-radius: 6;
-    padding: 3px;
-    font-size: 12px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-QPushButton:pressed
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
-}</string>
-    </property>
-    <property name="text">
-     <string> QR Code</string>
-    </property>
-   </widget>
-   <widget class="QGraphicsView" name="graphicsView_statistique">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>410</y>
-      <width>491</width>
-      <height>192</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true"/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_charger">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>370</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">
-QPushButton
-{
-    color: #ffc34a;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
-    border-width: 1px;
-    border-color: #1e1e1e;
-    border-style: solid;
-    border-radius: 6;
-    padding: 3px;
-    font-size: 12px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-QPushButton:pressed
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
-}</string>
-    </property>
-    <property name="text">
-     <string>Charger</string>
-    </property>
-   </widget>
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>50</y>
-      <width>351</width>
-      <height>521</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 25 9pt &quot;Adobe Song Std L&quot;;
-font: 75 9pt &quot;Adobe Caslon Pro Bold&quot;;</string>
-    </property>
-    <property name="title">
-     <string>Ajouter OU Modifier un employé</string>
-    </property>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>30</y>
-       <width>56</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 25 9pt &quot;Adobe Song Std L&quot;;</string>
-     </property>
-     <property name="text">
-      <string>CIN :</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>70</y>
-       <width>56</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 25 9pt &quot;Adobe Song Std L&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Nom : </string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_3">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>230</y>
-       <width>56</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 25 9pt &quot;Adobe Song Std L&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Email :</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_4">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>150</y>
-       <width>171</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 25 9pt &quot;Adobe Song Std L&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Numéro de téléphone :</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_5">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>110</y>
-       <width>56</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 25 9pt &quot;Adobe Song Std L&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Prenom :</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_6">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>270</y>
-       <width>91</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 25 9pt &quot;Adobe Song Std L&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Mot de passe : </string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_7">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>370</y>
-       <width>71</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 25 9pt &quot;Adobe Song Std L&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Adresse : </string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_8">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>410</y>
-       <width>56</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 25 9pt &quot;Adobe Song Std L&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Type :</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_9">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>190</y>
-       <width>56</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 25 9pt &quot;Adobe Song Std L&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Sexe :</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_10">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>320</y>
-       <width>121</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 25 9pt &quot;Adobe Song Std L&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Date de naissance : </string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_cin_ajouter">
-     <property name="geometry">
-      <rect>
-       <x>220</x>
-       <y>30</y>
-       <width>113</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit
-{
-color: #ffc34a;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffc34a, stop: 0 #646464, stop: 1 #5d5d5d);
-    padding: 1px;
-    border-style: solid;
-    border: 1px solid #1e1e1e;
-    border-radius: 5;
-}</string>
-     </property>
-     <property name="maxLength">
-      <number>8</number>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_nom_ajouter">
-     <property name="geometry">
-      <rect>
-       <x>220</x>
-       <y>70</y>
-       <width>113</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit
-{
-color: #ffc34a;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffc34a, stop: 0 #646464, stop: 1 #5d5d5d);
-    padding: 1px;
-    border-style: solid;
-    border: 1px solid #1e1e1e;
-    border-radius: 5;
-}</string>
-     </property>
-     <property name="maxLength">
-      <number>20</number>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_prenom_ajouter">
-     <property name="geometry">
-      <rect>
-       <x>220</x>
-       <y>110</y>
-       <width>113</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit
-{
-color: #ffc34a;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffc34a, stop: 0 #646464, stop: 1 #5d5d5d);
-    padding: 1px;
-    border-style: solid;
-    border: 1px solid #1e1e1e;
-    border-radius: 5;
-}</string>
-     </property>
-     <property name="maxLength">
-      <number>20</number>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_numtel_ajouter">
-     <property name="geometry">
-      <rect>
-       <x>220</x>
-       <y>150</y>
-       <width>113</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit
-{
-color: #ffc34a;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffc34a, stop: 0 #646464, stop: 1 #5d5d5d);
-    padding: 1px;
-    border-style: solid;
-    border: 1px solid #1e1e1e;
-    border-radius: 5;
-}</string>
-     </property>
-     <property name="maxLength">
-      <number>8</number>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_email_ajouter">
-     <property name="geometry">
-      <rect>
-       <x>220</x>
-       <y>230</y>
-       <width>113</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit
-{
-color: #ffc34a;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffc34a, stop: 0 #646464, stop: 1 #5d5d5d);
-    padding: 1px;
-    border-style: solid;
-    border: 1px solid #1e1e1e;
-    border-radius: 5;
-}</string>
-     </property>
-     <property name="maxLength">
-      <number>50</number>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_mdp_ajouter">
-     <property name="geometry">
-      <rect>
-       <x>220</x>
-       <y>270</y>
-       <width>113</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit
-{
-color: #ffc34a;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffc34a, stop: 0 #646464, stop: 1 #5d5d5d);
-    padding: 1px;
-    border-style: solid;
-    border: 1px solid #1e1e1e;
-    border-radius: 5;
-}</string>
-     </property>
-     <property name="maxLength">
-      <number>20</number>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="comboBox_type_ajouter">
-     <property name="geometry">
-      <rect>
-       <x>200</x>
-       <y>410</y>
-       <width>131</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QComboBox
-{
- color: #ffc34a;
-    selection-background-color: #ffaa00;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
-    border-style: solid;
-    border: 1px solid #1e1e1e;
-    border-radius: 5;
-}
-
-QComboBox:hover,QPushButton:hover
-{
-    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
-}
-
-
-QComboBox:on
-{
-    padding-top: 3px;
-    padding-left: 4px;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
-    selection-background-color: #ffaa00;
-}
-
-QComboBox QAbstractItemView
-{
-    border: 2px solid darkgray;
-    selection-background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
-}
-
-QComboBox::drop-down
-{
-     subcontrol-origin: padding;
-     subcontrol-position: top right;
-     width: 15px;
-
-     border-left-width: 0px;
-     border-left-color: darkgray;
-     border-left-style: solid; /* just a single line */
-     border-top-right-radius: 3px; /* same radius as the QComboBox */
-     border-bottom-right-radius: 3px;
- }
-
-QComboBox::down-arrow
-{
-     image: url(:/down_arrow.png);
-}</string>
-     </property>
-     <item>
-      <property name="text">
-       <string>Choisir un type</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Chef</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Agent</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_adr_ajouter">
-     <property name="geometry">
-      <rect>
-       <x>220</x>
-       <y>370</y>
-       <width>113</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit
-{
-color: #ffc34a;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffc34a, stop: 0 #646464, stop: 1 #5d5d5d);
-    padding: 1px;
-    border-style: solid;
-    border: 1px solid #1e1e1e;
-    border-radius: 5;
-}</string>
-     </property>
-     <property name="maxLength">
-      <number>50</number>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_ajouter">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>470</y>
-       <width>93</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton
-{
-    color: #ffc34a;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
-    border-width: 1px;
-    border-color: #1e1e1e;
-    border-style: solid;
-    border-radius: 6;
-    padding: 3px;
-    font-size: 12px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-QPushButton:pressed
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
-}</string>
-     </property>
-     <property name="text">
-      <string>Ajouter</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_annuler">
-     <property name="geometry">
-      <rect>
-       <x>250</x>
-       <y>470</y>
-       <width>93</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton
-{
-    color: #ffc34a;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
-    border-width: 1px;
-    border-color: #1e1e1e;
-    border-style: solid;
-    border-radius: 6;
-    padding: 3px;
-    font-size: 12px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-QPushButton:pressed
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
-}</string>
-     </property>
-     <property name="text">
-      <string>Annuler</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_modifier">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>470</y>
-       <width>93</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
-QPushButton
-{
-    color: #ffc34a;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
-    border-width: 1px;
-    border-color: #1e1e1e;
-    border-style: solid;
-    border-radius: 6;
-    padding: 3px;
-    font-size: 12px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-QPushButton:pressed
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
-}</string>
-     </property>
-     <property name="text">
-      <string>Modifier</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_sexe_ajouter">
-     <property name="geometry">
-      <rect>
-       <x>220</x>
-       <y>190</y>
-       <width>113</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLineEdit
-{
-color: #ffc34a;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffc34a, stop: 0 #646464, stop: 1 #5d5d5d);
-    padding: 1px;
-    border-style: solid;
-    border: 1px solid #1e1e1e;
-    border-radius: 5;
-}</string>
-     </property>
-     <property name="maxLength">
-      <number>8</number>
-     </property>
-    </widget>
-    <widget class="QDateEdit" name="dateEdit">
-     <property name="geometry">
-      <rect>
-       <x>220</x>
-       <y>320</y>
-       <width>110</width>
-       <height>22</height>
-      </rect>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>440</x>
-      <y>60</y>
-      <width>113</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLineEdit
-{
-color: #ffc34a;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 0 #646464, stop: 1 #5d5d5d);
-    padding: 1px;
-    border-style: solid;
-    border: 1px solid #1e1e1e;
-    border-radius: 5;
-}</string>
-    </property>
-    <property name="text">
-     <string>Chercher</string>
-    </property>
-    <property name="clearButtonEnabled">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_12">
-    <property name="geometry">
-     <rect>
-      <x>1020</x>
-      <y>380</y>
-      <width>61</width>
-      <height>20</height>
+      <x>240</x>
+      <y>100</y>
+      <width>381</width>
+      <height>231</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 75 9pt &quot;Adobe Caslon Pro Bold&quot;;</string>
     </property>
-    <property name="text">
-     <string>QR Code</string>
+    <property name="title">
+     <string>LogIn</string>
     </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Nom d'utilisateur</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_nomutilisateur">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 0 #ffc34a, stop: 1 #5d5d5d);
+    padding: 1px;
+    border-style: solid;
+    border: 1px solid #1e1e1e;
+    border-radius: 5;
+}</string>
+       </property>
+       <property name="maxLength">
+        <number>8</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Mot de passe</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_motpasse">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 0 #ffc34a, stop: 1 #5d5d5d);
+    padding: 1px;
+    border-style: solid;
+    border: 1px solid #1e1e1e;
+    border-radius: 5;
+}</string>
+       </property>
+       <property name="maxLength">
+        <number>8</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_conncter">
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    color: #ffc34a;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
+    border-width: 1px;
+    border-color: #1e1e1e;
+    border-style: solid;
+    border-radius: 6;
+    padding: 3px;
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+       </property>
+       <property name="text">
+        <string>Se Connecter</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
-   <widget class="QLabel" name="label_13">
+   <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>-150</x>
-      <y>0</y>
-      <width>1511</width>
-      <height>731</height>
+      <x>240</x>
+      <y>360</y>
+      <width>381</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 9pt &quot;Adobe Caslon Pro Bold&quot;;</string>
+    </property>
+    <property name="title">
+     <string>SignUp</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Nom d'utilisateur</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_nomutilisateur_2">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 0 #ffc34a, stop: 1 #5d5d5d);
+    padding: 1px;
+    border-style: solid;
+    border: 1px solid #1e1e1e;
+    border-radius: 5;
+}</string>
+       </property>
+       <property name="maxLength">
+        <number>8</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Mot de passe</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_motpasse_2">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 0 #ffc34a, stop: 1 #5d5d5d);
+    padding: 1px;
+    border-style: solid;
+    border: 1px solid #1e1e1e;
+    border-radius: 5;
+}</string>
+       </property>
+       <property name="maxLength">
+        <number>8</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Confirmer mot de passe</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_motpasse_3">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 0 #ffc34a, stop: 1 #5d5d5d);
+    padding: 1px;
+    border-style: solid;
+    border: 1px solid #1e1e1e;
+    border-radius: 5;
+}</string>
+       </property>
+       <property name="maxLength">
+        <number>8</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_inscrire">
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+    color: #ffc34a;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
+    border-width: 1px;
+    border-color: #1e1e1e;
+    border-style: solid;
+    border-radius: 6;
+    padding: 3px;
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}</string>
+       </property>
+       <property name="text">
+        <string>S'inscrire</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>-50</x>
+      <y>-30</y>
+      <width>1311</width>
+      <height>871</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../../../Users/MSI/Downloads/wallpaperflare.com_wallpaper (1).png</pixmap>
+     <pixmap>../../../../2A20/semestre2/Projet C++/wallpaperflare.com_wallpaper (1) (1).png</pixmap>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_stat">
-    <property name="geometry">
-     <rect>
-      <x>600</x>
-      <y>610</y>
-      <width>131</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">
-QPushButton
-{
-    color: #ffc34a;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
-    border-width: 1px;
-    border-color: #1e1e1e;
-    border-style: solid;
-    border-radius: 6;
-    padding: 3px;
-    font-size: 12px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-QPushButton:pressed
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
-}</string>
-    </property>
-    <property name="text">
-     <string>Gerer les statistiques</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_tri">
-    <property name="geometry">
-     <rect>
-      <x>800</x>
-      <y>60</y>
-      <width>61</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">
-QPushButton
-{
-    color: #ffc34a;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
-    border-width: 1px;
-    border-color: #1e1e1e;
-    border-style: solid;
-    border-radius: 6;
-    padding: 3px;
-    font-size: 12px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-QPushButton:pressed
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
-}</string>
-    </property>
-    <property name="text">
-     <string>Trier</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_pdf">
-    <property name="geometry">
-     <rect>
-      <x>680</x>
-      <y>370</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton
-{
-    color: #ffc34a;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
-    border-width: 1px;
-    border-color: #1e1e1e;
-    border-style: solid;
-    border-radius: 6;
-    padding: 3px;
-    font-size: 12px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-QPushButton:pressed
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
-}</string>
-    </property>
-    <property name="text">
-     <string>PDF</string>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="comboBox_tri">
-    <property name="geometry">
-     <rect>
-      <x>660</x>
-      <y>60</y>
-      <width>131</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QComboBox
-{
- color: #ffc34a;
-    selection-background-color: #ffaa00;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
-    border-style: solid;
-    border: 1px solid #1e1e1e;
-    border-radius: 5;
-}
-
-QComboBox:hover,QPushButton:hover
-{
-    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
-}
-
-
-QComboBox:on
-{
-    padding-top: 3px;
-    padding-left: 4px;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
-    selection-background-color: #ffaa00;
-}
-
-QComboBox QAbstractItemView
-{
-    border: 2px solid darkgray;
-    selection-background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
-}
-
-QComboBox::drop-down
-{
-     subcontrol-origin: padding;
-     subcontrol-position: top right;
-     width: 15px;
-
-     border-left-width: 0px;
-     border-left-color: darkgray;
-     border-left-style: solid; /* just a single line */
-     border-top-right-radius: 3px; /* same radius as the QComboBox */
-     border-bottom-right-radius: 3px;
- }
-
-QComboBox::down-arrow
-{
-     image: url(:/down_arrow.png);
-}</string>
-    </property>
-    <item>
-     <property name="text">
-      <string>trier par</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>nom</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Date de naissance</string>
-     </property>
-    </item>
-   </widget>
-   <zorder>label_13</zorder>
-   <zorder>graphicsView_statistique</zorder>
-   <zorder>label_12</zorder>
-   <zorder>tableView_affiche</zorder>
-   <zorder>pushButton_charger</zorder>
-   <zorder>label_15</zorder>
-   <zorder>pushButton_supprimer</zorder>
-   <zorder>graphicsView_statistique_2</zorder>
+   <zorder>label_6</zorder>
    <zorder>groupBox</zorder>
-   <zorder>pushButton_genererqr</zorder>
-   <zorder>lineEdit</zorder>
-   <zorder>pushButton_stat</zorder>
-   <zorder>pushButton_tri</zorder>
-   <zorder>pushButton_pdf</zorder>
-   <zorder>comboBox_tri</zorder>
+   <zorder>groupBox_2</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1202</width>
+     <width>868</width>
      <height>22</height>
     </rect>
    </property>

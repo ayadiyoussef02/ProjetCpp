@@ -18,19 +18,21 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     connection.cpp \
+    emp.cpp \
     employee.cpp \
-    login.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    qrcodegen.cpp
 
 HEADERS += \
     connection.h \
+    emp.h \
     employee.h \
-    login.h \
-    mainwindow.h
+    mainwindow.h \
+    qrcodegen.h
 
 FORMS += \
-    login.ui \
+    emp.ui \
     mainwindow.ui
 
 # Default rules for deployment.

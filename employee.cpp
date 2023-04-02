@@ -18,7 +18,7 @@ Employee::Employee()
 
 }
 
-Employee::Employee(QString cin_e,QString nom_e,QString prenom_e,QString num_tel_e,QString sexe_e,QString email_e,QString mtp_e,QString adresse_e,QDate date_n_e,QString type_e)
+Employee::Employee(QString cin_e,QString nom_e,QString prenom_e,QString num_tel_e,QString sexe_e,QString email_e,QString mtp_e,QDate date_n_e,QString adresse_e,QString type_e)
 {
         this->cin_e=cin_e;
         this->nom_e=nom_e;
@@ -27,8 +27,8 @@ Employee::Employee(QString cin_e,QString nom_e,QString prenom_e,QString num_tel_
         this->sexe_e=sexe_e;
         this->email_e=email_e;
         this->mtp_e=mtp_e;
-        this->adresse_e=adresse_e;
         this->date_n_e=date_n_e;
+        this->adresse_e=adresse_e;
         this->type_e=type_e;
 }
 
@@ -99,8 +99,8 @@ QSqlQueryModel* Employee::afficher()
     model->setHeaderData(4, Qt::Horizontal,QObject::tr("sexe_e"));
     model->setHeaderData(5, Qt::Horizontal,QObject::tr("email_e"));
     model->setHeaderData(6, Qt::Horizontal,QObject::tr("mtp_e"));
-    model->setHeaderData(8, Qt::Horizontal,QObject::tr("date_n_e"));
-    model->setHeaderData(7, Qt::Horizontal,QObject::tr("adresse_e"));
+    model->setHeaderData(7, Qt::Horizontal,QObject::tr("date_n_e"));
+    model->setHeaderData(8, Qt::Horizontal,QObject::tr("adresse_e"));
     model->setHeaderData(9, Qt::Horizontal,QObject::tr("type_e"));
     return model;
 }
@@ -141,7 +141,24 @@ QSqlQueryModel * Employee::Tri_dateN()
     return model;
 }
 
-QSqlQueryModel * Employee::rechercher(QString nom)
+QSqlQueryModel * Employee::Tri_sexe()
+{
+    QSqlQueryModel * model = new QSqlQueryModel();
+    model->setQuery("SELECT * FROM EMPLOYER ORDER BY sexe_e");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("cin_e"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("nom_e"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("prenom_e"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("num_tel_e"));
+    model->setHeaderData(4, Qt::Horizontal,QObject::tr("sexe_e"));
+    model->setHeaderData(5, Qt::Horizontal,QObject::tr("email_e"));
+    model->setHeaderData(6, Qt::Horizontal,QObject::tr("mtp_e"));
+    model->setHeaderData(8, Qt::Horizontal,QObject::tr("date_n_e"));
+    model->setHeaderData(7, Qt::Horizontal,QObject::tr("adresse_e"));
+    model->setHeaderData(9, Qt::Horizontal,QObject::tr("type_e"));
+    return model;
+}
+
+QSqlQueryModel * Employee::rechercher_nom(QString nom)
 {
     QSqlQueryModel *model= new QSqlQueryModel();
     QSqlQuery q;
@@ -151,6 +168,63 @@ QSqlQueryModel * Employee::rechercher(QString nom)
     model->setQuery(q);
     return (model);
 
+}
+
+QChart * Employee ::stat(){
+QSqlQuery q,q1,q2;
+   q.exec("Select * from EMPLOYER");
+   int tot=0;
+   while (q.next())
+       tot++;
+  qDebug() << "total =" << tot;
+   q1.prepare("Select * from EMPLOYER where sexe_e = :sexe_e ");
+   q1.bindValue(":sexe_e","Homme");
+   q1.exec();
+
+   int tot_don=0;
+   while (q1.next())
+       tot_don++;
+qDebug() << "pourcentage don =" << tot_don;
+   qreal pour_1=(tot_don*100)/tot;
+
+   q2.prepare("Select * from EMPLOYER where sexe_e = :sexe_e  ");
+   q2.bindValue(":sexe_e","Femme");
+   q2.exec();
+   int tot_event=0;
+   while (q2.next())
+       tot_event++;
+
+   qreal pour_2=(tot_event*100)/tot;
+
+
+
+   QPieSeries *series = new QPieSeries();
+    series->append("Homme",pour_1);
+    series->append("Femme",pour_2);
+
+    QPieSlice *slice0= series->slices().at(0);
+    slice0->setBrush(Qt::blue);
+    //slice0->setLabelVisible();
+
+    QPieSlice *slice1 = series->slices().at(1);
+    slice1->setBrush(Qt::green);
+/*
+    QPieSlice *slice2= series->slices().at(2);
+    slice2->setLabelVisible();
+     slice2->setBrush(Qt::red);*/
+
+    QChart *chart = new QChart();
+
+    chart->addSeries(series);
+
+    chart->setTitle("Statistisue Homme & Femme");
+    chart->legend()->hide();
+    series->setLabelsVisible();
+   for(auto slice : series->slices())
+    slice->setLabel(QString("%1%").arg(100*slice->percentage(), 0, 'f', 1));
+ //chart->setBackgroundBrush(Qt::transparent);
+
+   return chart;
 }
 
 

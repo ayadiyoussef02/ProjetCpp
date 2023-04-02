@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>434</width>
-    <height>318</height>
+    <width>574</width>
+    <height>400</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,10 +16,10 @@
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>80</y>
-     <width>231</width>
-     <height>161</height>
+     <x>130</x>
+     <y>100</y>
+     <width>281</width>
+     <height>181</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -109,8 +109,8 @@ QPushButton:pressed
   <widget class="QLabel" name="label_13">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>0</y>
+     <x>-160</x>
+     <y>-60</y>
      <width>1291</width>
      <height>691</height>
     </rect>
@@ -119,7 +119,7 @@ QPushButton:pressed
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../../../../Users/MSI/Downloads/wallpaperflare.com_wallpaper (1).png</pixmap>
+    <pixmap>../wallpaperflare.com_wallpaper (1).png</pixmap>
    </property>
   </widget>
   <zorder>label_13</zorder>

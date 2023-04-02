@@ -4,6 +4,8 @@
 #include <QDate>
 #include <QtSql/QSqlQuery>
 #include <QtSql/QSqlQueryModel>
+#include <QtCharts>
+
 
 class Employee
 {
@@ -13,7 +15,7 @@ private:
 public:
     //Constructeur-destructeur
     Employee();
-    Employee(QString,QString,QString,QString,QString,QString,QString,QString,QDate,QString);
+    Employee(QString,QString,QString,QString,QString,QString,QString,QDate,QString,QString);
     ~Employee(){};
 
     //Getters
@@ -50,8 +52,13 @@ public:
              QSqlQueryModel * tri();
              QSqlQueryModel * Tri_nom();
              QSqlQueryModel * Tri_dateN();
-             QSqlQueryModel *rechercher(QString nom);
+             QSqlQueryModel * Tri_sexe();
+
+             QSqlQueryModel *rechercher_nom(QString nom);
+
              QString  export_pdf();
+
+             QChart *stat();
 
 
 
