@@ -79,6 +79,7 @@ void MainWindow::on_pushButton_conncter_clicked()
            }
 
 
+
 }
 
 
@@ -86,15 +87,15 @@ void MainWindow::on_pushButton_inscrire_clicked()
 {
 
     QSqlDatabase db;
-    db = QSqlDatabase::addDatabase("QODBC");
+    /*db = QSqlDatabase::addDatabase("QODBC");
     db.setDatabaseName("Source_Projet2A");
     db.setUserName("ayadi");//inserer nom de l'utilisateur
-    db.setPassword("youssef");//inserer mot de passe de cet utilisateur
+    db.setPassword("youssef");//inserer mot de passe de cet utilisateur*/
 
     QSqlQuery query(db);
 
 
-    if (db.open())
+    if (!db.open())
     {
         if (ui->lineEdit_motpasse_2->text()=="")
         {QMessageBox::critical(nullptr, QObject::tr("ERROR"), QObject::tr("Don't leave password empty.\n""Click Cancel to retry ."), QMessageBox::Cancel);
@@ -109,7 +110,7 @@ void MainWindow::on_pushButton_inscrire_clicked()
         {
 
 
-            query.prepare("insert into INF_CONNEXION(NOM_UT,MDP)" "values (:NOM_UT, :MDP);");
+            query.prepare("insert into INF_CONNEXION (NOM_UT,MDP)" "values (:NOM_UT, :MDP);");
 
             query.bindValue(":NOM_UT",ui->lineEdit_nomutilisateur_2->text());
             query.bindValue(":MDP",ui->lineEdit_motpasse_2->text());

@@ -49,7 +49,7 @@ public:
              bool modifier(QString);
 
 
-             QSqlQueryModel * tri();
+             QSqlQueryModel * Tri_pardefaut();
              QSqlQueryModel * Tri_nom();
              QSqlQueryModel * Tri_dateN();
              QSqlQueryModel * Tri_sexe();

@@ -343,6 +343,8 @@ void emp::on_pushButton_tri_clicked()
        ui->tableView_affiche->setModel(E.Tri_dateN());
     }else if(trie=="sexe"){
         ui->tableView_affiche->setModel(E.Tri_sexe());
+    }else if(trie=="trier par défaut"){
+        ui->tableView_affiche->setModel(E.Tri_pardefaut());
     }
 }
 

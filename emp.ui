@@ -1002,7 +1002,7 @@ QComboBox::down-arrow
     </property>
     <item>
      <property name="text">
-      <string>trier par</string>
+      <string>trier par défaut</string>
      </property>
     </item>
     <item>

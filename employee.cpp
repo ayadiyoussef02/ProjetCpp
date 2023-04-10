@@ -105,7 +105,22 @@ QSqlQueryModel* Employee::afficher()
     return model;
 }
 
-
+QSqlQueryModel * Employee::Tri_pardefaut()
+{
+    QSqlQueryModel * model = new QSqlQueryModel();
+    model->setQuery("SELECT * FROM EMPLOYER");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("cin_e"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("nom_e"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("prenom_e"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("num_tel_e"));
+    model->setHeaderData(4, Qt::Horizontal,QObject::tr("sexe_e"));
+    model->setHeaderData(5, Qt::Horizontal,QObject::tr("email_e"));
+    model->setHeaderData(6, Qt::Horizontal,QObject::tr("mtp_e"));
+    model->setHeaderData(8, Qt::Horizontal,QObject::tr("date_n_e"));
+    model->setHeaderData(7, Qt::Horizontal,QObject::tr("adresse_e"));
+    model->setHeaderData(9, Qt::Horizontal,QObject::tr("type_e"));
+    return model;
+}
 QSqlQueryModel * Employee::Tri_nom()
 {
     QSqlQueryModel * model = new QSqlQueryModel();
