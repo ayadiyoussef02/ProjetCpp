@@ -1133,8 +1133,8 @@ QComboBox::down-arrow
    <widget class="QPushButton" name="pushButton_retour">
     <property name="geometry">
      <rect>
-      <x>1090</x>
-      <y>650</y>
+      <x>1050</x>
+      <y>640</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -1161,9 +1161,26 @@ QPushButton:pressed
 }</string>
     </property>
     <property name="text">
-     <string>RETOUR</string>
+     <string>Retour</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>-80</x>
+      <y>10</y>
+      <width>1641</width>
+      <height>761</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../../../2A20/semestre2/Projet C++/wallpaperflare.com_wallpaper (1) (1).png</pixmap>
+    </property>
+   </widget>
+   <zorder>label_14</zorder>
    <zorder>label_13</zorder>
    <zorder>label_12</zorder>
    <zorder>tableView_affiche</zorder>

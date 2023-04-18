@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "emp.h"
 #include "connection.h"
+#include "oublier.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -22,11 +23,13 @@ private slots:
 
     void on_pushButton_conncter_clicked();
 
-    void on_pushButton_inscrire_clicked();
+
+
+    void on_commandLinkButton_clicked();
 
 private:
     Ui::MainWindow *ui;
-
-    emp e;
+oublier o;
+  //  emp *e;
 };
 #endif // MAINWINDOW_H

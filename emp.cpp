@@ -1,4 +1,5 @@
 #include "emp.h"
+#include "oublier.h"
 #include "ui_emp.h"
 #include"qrcodegen.h"
 #include<QMessageBox>
@@ -15,11 +16,15 @@
 #include <QRegularExpression>
 #include <QRegExp>
 
-emp::emp(QWidget *parent) :
+emp::emp(QWidget *parent, const QString& str) :
     QDialog(parent),
     ui(new Ui::emp)
 {
     ui->setupUi(this);
+    //pour annuler des affichage des choses
+    //if (str!="Chef")
+        //ui->groupBox->hide();
+    //ui->pushButton_retour->setText(str);
 
    // ui->tableView_affiche->setModel(E.afficher());
     ui->lineEdit_cin_ajouter->setValidator(new QRegExpValidator(QRegExp("[0-9]*")));
@@ -175,7 +180,8 @@ void emp::on_pushButton_ajouter_clicked()
 }
 
 void emp::on_pushButton_modifier_clicked()
-{
+{ //emp e;
+    //oublier o;
     QString cin_e=ui->lineEdit_cin_ajouter->text();
     QString nom_e=ui->lineEdit_nom_ajouter->text();
     QString prenom_e=ui->lineEdit_prenom_ajouter->text();
@@ -186,6 +192,10 @@ void emp::on_pushButton_modifier_clicked()
     QDate date_n_e=ui->dateEdit->date();
     QString adresse_e=ui->lineEdit_adr_ajouter->text();
     QString type_e=ui->comboBox_type_ajouter->currentText();
+
+
+
+
 
 
 
@@ -283,6 +293,8 @@ void emp::on_pushButton_modifier_clicked()
                QMessageBox::critical(nullptr, QObject::tr("Modifier un emloyee"),
 
                                      QObject::tr("Erreur !!!!!!!!\n"), QMessageBox::Cancel);
+               //e.exec();
+               //o.exec();
             }
         }
         ui->tableView_affiche->setModel(E.afficher());

@@ -22,6 +22,7 @@ SOURCES += \
     employee.cpp \
     main.cpp \
     mainwindow.cpp \
+    oublier.cpp \
     qrcodegen.cpp
 
 HEADERS += \
@@ -29,11 +30,13 @@ HEADERS += \
     emp.h \
     employee.h \
     mainwindow.h \
+    oublier.h \
     qrcodegen.h
 
 FORMS += \
     emp.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    oublier.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

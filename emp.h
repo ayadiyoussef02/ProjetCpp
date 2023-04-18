@@ -13,7 +13,7 @@ class emp : public QDialog
     Q_OBJECT
 
 public:
-    explicit emp(QWidget *parent = nullptr);
+    explicit emp(QWidget *parent = nullptr,const QString& str = "");
     ~emp();
 
 private slots:

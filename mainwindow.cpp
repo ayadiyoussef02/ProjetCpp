@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include"qrcodegen.h"
+#include "oublier.h"
 #include<QMessageBox>
 #include <QApplication>
 #include <QFileDialog>
@@ -14,6 +15,8 @@
 #include <QtCharts>
 #include <QRegularExpression>
 #include <QRegExp>
+#include <QDebug>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -34,18 +37,22 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_conncter_clicked()
 {
-    emp e;
+    emp* e;
         connection c;
-
+QString Nom_utilisateur,mdp,type;
         c.createconnect();
-           QSqlQueryModel model;
+           QSqlQuery query("SELECT MTP_E, CONCAT(NOM_E,PRENOM_E) as Nom_ut ,TYPE_E from EMPLOYER WHERE NOM_E || PRENOM_E ='" + ui->lineEdit_nomutilisateur->text() + "';");
 
-           model.setQuery("SELECT * from INF_CONNEXION WHERE (NOM_UT  LIKE '"+ui->lineEdit_nomutilisateur->text()+"');");
+           while (query.next()) {
+               mdp = query.value(0).toString();
+                Nom_utilisateur = query.value(1).toString();
+               type = query.value(2).toString();
 
-           QString Nom=model.data(model.index(0, 0)).toString();
-           QString mdp=model.data(model.index(0, 1)).toString();
+           }
 
-           if ((mdp==ui->lineEdit_motpasse->text()) && (Nom!=""))
+qDebug()<<"Nom= "<< ui->lineEdit_nomutilisateur->text()<<" mdp= "<< ui->lineEdit_motpasse->text() <<endl;
+
+           if ((mdp==ui->lineEdit_motpasse->text()) && (Nom_utilisateur!=""))
            {
                bool test=true;
                test=c.createconnect();
@@ -56,8 +63,9 @@ void MainWindow::on_pushButton_conncter_clicked()
                                                         "Click Cancel to exit."), QMessageBox::Cancel);
                    this->hide();
 
+    e = new emp(nullptr,type);
+                   e->exec();
 
-                   e.exec();
 
                }
                else
@@ -83,46 +91,10 @@ void MainWindow::on_pushButton_conncter_clicked()
 }
 
 
-void MainWindow::on_pushButton_inscrire_clicked()
+
+void MainWindow::on_commandLinkButton_clicked()
 {
 
-    QSqlDatabase db;
-    /*db = QSqlDatabase::addDatabase("QODBC");
-    db.setDatabaseName("Source_Projet2A");
-    db.setUserName("ayadi");//inserer nom de l'utilisateur
-    db.setPassword("youssef");//inserer mot de passe de cet utilisateur*/
 
-    QSqlQuery query(db);
-
-
-    if (!db.open())
-    {
-        if (ui->lineEdit_motpasse_2->text()=="")
-        {QMessageBox::critical(nullptr, QObject::tr("ERROR"), QObject::tr("Don't leave password empty.\n""Click Cancel to retry ."), QMessageBox::Cancel);
-
-        }else if  (ui->lineEdit_motpasse_2->text()!=ui->lineEdit_motpasse_3->text())
-         {   QMessageBox::critical(nullptr, QObject::tr("ERROR"), QObject::tr("Passwords don't match.\n""Click Cancel to retry ."), QMessageBox::Cancel);
-        }else if (ui->lineEdit_nomutilisateur_2->text()=="")
-         {   QMessageBox::critical(nullptr, QObject::tr("ERROR"), QObject::tr("Don't leave Username Empty.\n""Click Cancel to retry ."), QMessageBox::Cancel);
-   }else
-
-
-        {
-
-
-            query.prepare("insert into INF_CONNEXION (NOM_UT,MDP)" "values (:NOM_UT, :MDP);");
-
-            query.bindValue(":NOM_UT",ui->lineEdit_nomutilisateur_2->text());
-            query.bindValue(":MDP",ui->lineEdit_motpasse_2->text());
-
-
-
-        if (query.exec())
-                {
-                QMessageBox::information(nullptr, QObject::tr("Done"), QObject::tr("Credentials added.\n""Click Cancel to Continue ."), QMessageBox::Cancel);
+    o.show();
 }
-        }
-    }//qInfo() << "RFID4= "<<at<<" "<<endl;
-
-}
-

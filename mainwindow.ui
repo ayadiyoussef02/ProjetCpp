@@ -18,8 +18,8 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>100</y>
-      <width>381</width>
+      <y>160</y>
+      <width>371</width>
       <height>231</height>
      </rect>
     </property>
@@ -50,7 +50,7 @@
 }</string>
        </property>
        <property name="maxLength">
-        <number>8</number>
+        <number>50</number>
        </property>
       </widget>
      </item>
@@ -74,7 +74,7 @@
 }</string>
        </property>
        <property name="maxLength">
-        <number>8</number>
+        <number>50</number>
        </property>
        <property name="echoMode">
         <enum>QLineEdit::Password</enum>
@@ -110,129 +110,6 @@ QPushButton:pressed
      </item>
     </layout>
    </widget>
-   <widget class="QGroupBox" name="groupBox_2">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>360</y>
-      <width>381</width>
-      <height>261</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 75 9pt &quot;Adobe Caslon Pro Bold&quot;;</string>
-    </property>
-    <property name="title">
-     <string>SignUp</string>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
-     <item>
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string>Nom d'utilisateur</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="lineEdit_nomutilisateur_2">
-       <property name="styleSheet">
-        <string notr="true">QLineEdit
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 0 #ffc34a, stop: 1 #5d5d5d);
-    padding: 1px;
-    border-style: solid;
-    border: 1px solid #1e1e1e;
-    border-radius: 5;
-}</string>
-       </property>
-       <property name="maxLength">
-        <number>8</number>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_4">
-       <property name="text">
-        <string>Mot de passe</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="lineEdit_motpasse_2">
-       <property name="styleSheet">
-        <string notr="true">QLineEdit
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 0 #ffc34a, stop: 1 #5d5d5d);
-    padding: 1px;
-    border-style: solid;
-    border: 1px solid #1e1e1e;
-    border-radius: 5;
-}</string>
-       </property>
-       <property name="maxLength">
-        <number>8</number>
-       </property>
-       <property name="echoMode">
-        <enum>QLineEdit::Password</enum>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_5">
-       <property name="text">
-        <string>Confirmer mot de passe</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="lineEdit_motpasse_3">
-       <property name="styleSheet">
-        <string notr="true">QLineEdit
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 0 #ffc34a, stop: 1 #5d5d5d);
-    padding: 1px;
-    border-style: solid;
-    border: 1px solid #1e1e1e;
-    border-radius: 5;
-}</string>
-       </property>
-       <property name="maxLength">
-        <number>8</number>
-       </property>
-       <property name="echoMode">
-        <enum>QLineEdit::Password</enum>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_inscrire">
-       <property name="styleSheet">
-        <string notr="true">QPushButton
-{
-    color: #ffc34a;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
-    border-width: 1px;
-    border-color: #1e1e1e;
-    border-style: solid;
-    border-radius: 6;
-    padding: 3px;
-    font-size: 12px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-QPushButton:pressed
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
-}</string>
-       </property>
-       <property name="text">
-        <string>S'inscrire</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
@@ -246,12 +123,42 @@ QPushButton:pressed
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../../../2A20/semestre2/Projet C++/wallpaperflare.com_wallpaper (1) (1).png</pixmap>
+     <pixmap>../wallpaperflare.com_wallpaper (1) (1).png</pixmap>
     </property>
    </widget>
+   <widget class="QCommandLinkButton" name="commandLinkButton">
+    <property name="geometry">
+     <rect>
+      <x>246</x>
+      <y>400</y>
+      <width>371</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Mot De Passe OUBLIER</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>-40</x>
+      <y>-25</y>
+      <width>941</width>
+      <height>831</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../../../2A20/semestre2/Projet C++/wallpaperflare.com_wallpaper (1) (1).png</pixmap>
+    </property>
+   </widget>
+   <zorder>label_3</zorder>
    <zorder>label_6</zorder>
    <zorder>groupBox</zorder>
-   <zorder>groupBox_2</zorder>
+   <zorder>commandLinkButton</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
