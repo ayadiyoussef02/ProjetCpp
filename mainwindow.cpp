@@ -148,7 +148,7 @@ void MainWindow::returnEmloyee(){
                                              QObject::tr("connection successful.\n"
                                                          "Click Cancel to exit."), QMessageBox::Cancel);
                     if (type!="Chef"){
-                        message = "bonjour " + type;
+                        message = nomPrenom + " "+ type;
                         qDebug() << message;
                         QMessageBox::information(nullptr, QObject::tr("database is open"),
                                                  QObject::tr("opennnnn vous etes un agent.\n"
@@ -156,7 +156,7 @@ void MainWindow::returnEmloyee(){
                         A.writeToArduino(message.toUtf8());
                     }
                     else{
-                        message = "bonjour " + type;
+                        message = nomPrenom + " "+ type;
                         qDebug() << message;
                         QMessageBox::information(nullptr, QObject::tr("database is open"),
                                                  QObject::tr("opennnnn vous etes un chef.\n"
