@@ -116,6 +116,7 @@ qDebug()<<"Nom= "<< ui->lineEdit_nomutilisateur->text()<<" mdp= "<< ui->lineEdit
 
 
 }
+//ardouino
 void MainWindow::returnEmloyee(){
     emp* e;
     connection c;
