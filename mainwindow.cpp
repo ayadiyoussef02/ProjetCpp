@@ -16,7 +16,7 @@
 #include <QRegExp>
 #include <QDebug>
 
-
+//main
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
