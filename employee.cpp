@@ -15,6 +15,7 @@ Employee::Employee()
     adresse_e="";
     date_n_e=QDate::currentDate();
     type_e="";
+    idCarte="";
 
 }
 

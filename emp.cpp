@@ -1,5 +1,4 @@
 #include "emp.h"
-#include "oublier.h"
 #include "ui_emp.h"
 #include"qrcodegen.h"
 #include<QMessageBox>
@@ -22,7 +21,7 @@ emp::emp(QWidget *parent, const QString& str) :
 {
     ui->setupUi(this);
     //pour annuler des affichage des choses
-    //if (str!="Chef")
+   //if (str!="Chef")
         //ui->groupBox->hide();
     //ui->pushButton_retour->setText(str);
 

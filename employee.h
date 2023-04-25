@@ -10,7 +10,7 @@
 class Employee
 {
 private:
-    QString cin_e , nom_e , prenom_e,num_tel_e,sexe_e,email_e,mtp_e,adresse_e,type_e;
+    QString cin_e , nom_e , prenom_e,num_tel_e,sexe_e,email_e,mtp_e,adresse_e,type_e,idCarte;
     QDate date_n_e;
 public:
     //Constructeur-destructeur

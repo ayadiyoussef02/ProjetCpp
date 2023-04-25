@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include "emp.h"
 #include "connection.h"
-#include "oublier.h"
+#include "arduino.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -22,14 +22,13 @@ private slots:
 
 
     void on_pushButton_conncter_clicked();
-
-
-
-    void on_commandLinkButton_clicked();
+    void returnEmloyee();
 
 private:
     Ui::MainWindow *ui;
-oublier o;
+    Arduino A;
+    QByteArray data;
+
   //  emp *e;
 };
 #endif // MAINWINDOW_H

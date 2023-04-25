@@ -17,10 +17,10 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>160</y>
-      <width>371</width>
-      <height>231</height>
+      <x>120</x>
+      <y>140</y>
+      <width>601</width>
+      <height>391</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -110,13 +110,13 @@ QPushButton:pressed
      </item>
     </layout>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>-50</x>
-      <y>-30</y>
-      <width>1311</width>
-      <height>871</height>
+      <x>-40</x>
+      <y>-20</y>
+      <width>1121</width>
+      <height>801</height>
      </rect>
     </property>
     <property name="text">
@@ -126,39 +126,8 @@ QPushButton:pressed
      <pixmap>../wallpaperflare.com_wallpaper (1) (1).png</pixmap>
     </property>
    </widget>
-   <widget class="QCommandLinkButton" name="commandLinkButton">
-    <property name="geometry">
-     <rect>
-      <x>246</x>
-      <y>400</y>
-      <width>371</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Mot De Passe OUBLIER</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>-40</x>
-      <y>-25</y>
-      <width>941</width>
-      <height>831</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>../../../../../2A20/semestre2/Projet C++/wallpaperflare.com_wallpaper (1) (1).png</pixmap>
-    </property>
-   </widget>
    <zorder>label_3</zorder>
-   <zorder>label_6</zorder>
    <zorder>groupBox</zorder>
-   <zorder>commandLinkButton</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -166,7 +135,7 @@ QPushButton:pressed
      <x>0</x>
      <y>0</y>
      <width>868</width>
-     <height>22</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
