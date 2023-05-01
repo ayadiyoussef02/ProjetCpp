@@ -3,6 +3,7 @@
 #include <QMessageBox>
 #include "connection.h"
 
+
 int main(int argc, char *argv[])
 {
     //lodncdscbsdcs
@@ -10,6 +11,7 @@ int main(int argc, char *argv[])
     connection c;
     bool test=c.createconnect();
    MainWindow w;
+
 
     if(test)
     {

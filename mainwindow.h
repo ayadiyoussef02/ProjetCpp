@@ -5,6 +5,8 @@
 #include "emp.h"
 #include "connection.h"
 #include "arduino.h"
+#include "menu.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -28,6 +30,7 @@ private:
     Ui::MainWindow *ui;
     Arduino A;
     QByteArray data;
+    menu *m;
 
   //  emp *e;
 };
