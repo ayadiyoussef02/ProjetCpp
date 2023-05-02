@@ -91,8 +91,8 @@ qDebug()<<"Nom= "<< ui->lineEdit_nomutilisateur->text()<<" mdp= "<< ui->lineEdit
                    this->hide();
                      A.getSerial()->close();
 
-    m = new menu(nullptr,type);
-                   m->exec();
+    e = new emp(nullptr,type);
+                   e->exec();
 
 
                }
@@ -168,8 +168,8 @@ void MainWindow::returnEmloyee(){
                     this->hide();
                     //A.getSerial()->close();
 
-     m = new menu(nullptr,type);
-                    m->exec();
+                    e = new emp(nullptr,type);
+                                   e->exec();
 
 
                 }

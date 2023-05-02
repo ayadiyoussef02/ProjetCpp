@@ -92,7 +92,7 @@ QSqlQuery query;
 
 
 
-query.prepare("UPDATE GESTIONCHERCHEUR SET nom_ch=:nom_ch, prenom_ch=:prenom_ch, num_tel_ch=:num_tel_ch, date_i_ch=date_i_ch, type_ch=:type_ch, sexe_ch=:sexe_ch, date_r=:date_r WHERE cin_chercheur=:cin_chercheur");
+query.prepare("UPDATE GESTIONCHERCHEUR SET cin_chercheur=:cin_chercheur, nom_ch=:nom_ch, prenom_ch=:prenom_ch, num_tel_ch=:num_tel_ch, date_i_ch=date_i_ch, type_ch=:type_ch, sexe_ch=:sexe_ch, date_r=:date_r WHERE cin_chercheur=:cin_chercheur");
 
 query.bindValue(":cin_chercheur", cin_chercheur);
 query.bindValue(":nom_ch", nom_ch);

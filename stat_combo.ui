@@ -42,6 +42,25 @@
     <string>TextLabel</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>-90</x>
+     <y>-65</y>
+     <width>1251</width>
+     <height>851</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../wallpaperflare.com_wallpaper (1) (1).png</pixmap>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>buttonBox</zorder>
+  <zorder>label_stat</zorder>
  </widget>
  <resources/>
  <connections>

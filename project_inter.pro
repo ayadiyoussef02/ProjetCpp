@@ -19,20 +19,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     arduino.cpp \
     arduino1.cpp \
-    cherch.cpp \
     chercheur.cpp \
     connection.cpp \
     emp.cpp \
     employee.cpp \
     exportexcel.cpp \
-    format.cpp \
     formation.cpp \
-    lab.cpp \
     labo.cpp \
     main.cpp \
     mainwindow.cpp \
-    menu.cpp \
-    pub.cpp \
     publication.cpp \
     qrcodegen.cpp \
     stat.cpp \
@@ -42,19 +37,14 @@ SOURCES += \
 HEADERS += \
     arduino.h \
     arduino1.h \
-    cherch.h \
     chercheur.h \
     connection.h \
     emp.h \
     employee.h \
     exportexcel.h \
-    format.h \
     formation.h \
-    lab.h \
     labo.h \
     mainwindow.h \
-    menu.h \
-    pub.h \
     publication.h \
     qrcodegen.h \
     stat.h \
@@ -63,13 +53,8 @@ HEADERS += \
     webaxwidget.h
 
 FORMS += \
-    cherch.ui \
     emp.ui \
-    format.ui \
-    lab.ui \
     mainwindow.ui \
-    menu.ui \
-    pub.ui \
     stat.ui \
     stat_combo.ui
 

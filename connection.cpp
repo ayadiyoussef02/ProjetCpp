@@ -13,6 +13,7 @@ db.setDatabaseName("Source_Project2A");
 
 db.setUserName("ayadi");//inserer nom de l'utilisateur
 db.setPassword("youssef");//inserer mot de passe de cet utilisateur
+
 /*
 db.setDatabaseName("Source_Projet2A");
 db.setUserName("khalil");//inserer nom de l'utilisateur
